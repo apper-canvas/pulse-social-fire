@@ -1,0 +1,186 @@
+[
+  {
+    "Id": 1,
+    "conversationId": 1,
+    "senderId": 1,
+    "content": "Hi Sarah! The project is going well. We've completed the UI components.",
+    "timestamp": "2024-01-15T09:00:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 2,
+    "conversationId": 1,
+    "senderId": 2,
+    "content": "That's great to hear! Can you show me the progress?",
+    "timestamp": "2024-01-15T09:05:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 3,
+    "conversationId": 1,
+    "senderId": 1,
+    "content": "Sure! I'll share the demo link in a few minutes.",
+    "timestamp": "2024-01-15T09:10:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 4,
+    "conversationId": 1,
+    "senderId": 2,
+    "content": "Perfect! Looking forward to seeing it.",
+    "timestamp": "2024-01-15T09:15:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 5,
+    "conversationId": 1,
+    "senderId": 2,
+    "content": "Hey! How's the new project coming along?",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 6,
+    "conversationId": 2,
+    "senderId": 1,
+    "content": "Mike, I've been looking at the AI integration proposal.",
+    "timestamp": "2024-01-15T08:30:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 7,
+    "conversationId": 2,
+    "senderId": 3,
+    "content": "Great! What are your thoughts on the approach?",
+    "timestamp": "2024-01-15T08:45:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 8,
+    "conversationId": 2,
+    "senderId": 1,
+    "content": "I think we should use a hybrid model for better performance.",
+    "timestamp": "2024-01-15T09:00:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 9,
+    "conversationId": 2,
+    "senderId": 3,
+    "content": "The AI integration looks promising. Let's discuss the implementation details.",
+    "timestamp": "2024-01-15T09:15:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 10,
+    "conversationId": 3,
+    "senderId": 1,
+    "content": "Alex, the new animations you added are fantastic!",
+    "timestamp": "2024-01-14T16:30:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 11,
+    "conversationId": 3,
+    "senderId": 4,
+    "content": "Thank you! I spent a lot of time fine-tuning the transitions.",
+    "timestamp": "2024-01-14T16:35:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 12,
+    "conversationId": 3,
+    "senderId": 4,
+    "content": "Love the new design direction! The animations are smooth.",
+    "timestamp": "2024-01-14T16:45:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 13,
+    "conversationId": 4,
+    "senderId": 5,
+    "content": "John, I've finished the data visualization dashboard.",
+    "timestamp": "2024-01-14T14:00:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 14,
+    "conversationId": 4,
+    "senderId": 1,
+    "content": "Excellent work, Emma! I'll review it this afternoon.",
+    "timestamp": "2024-01-14T14:10:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 15,
+    "conversationId": 4,
+    "senderId": 5,
+    "content": "The data visualization dashboard is ready for review.",
+    "timestamp": "2024-01-14T14:20:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 16,
+    "conversationId": 5,
+    "senderId": 1,
+    "content": "Lily, could you adjust the color scheme to be more accessible?",
+    "timestamp": "2024-01-14T11:00:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 17,
+    "conversationId": 5,
+    "senderId": 7,
+    "content": "Of course! I'll make sure it meets WCAG guidelines.",
+    "timestamp": "2024-01-14T11:15:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 18,
+    "conversationId": 5,
+    "senderId": 7,
+    "content": "Thanks for the design feedback! I'll make those adjustments.",
+    "timestamp": "2024-01-14T11:30:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 19,
+    "conversationId": 6,
+    "senderId": 8,
+    "content": "The new contribution guidelines are comprehensive!",
+    "timestamp": "2024-01-13T18:30:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 20,
+    "conversationId": 6,
+    "senderId": 1,
+    "content": "Thanks Ryan! Your input was invaluable in creating them.",
+    "timestamp": "2024-01-13T18:40:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 21,
+    "conversationId": 6,
+    "senderId": 8,
+    "content": "The open source contribution guidelines are now live.",
+    "timestamp": "2024-01-13T18:45:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 22,
+    "conversationId": 7,
+    "senderId": 1,
+    "content": "Steve, are you ready for the pitch presentation?",
+    "timestamp": "2024-01-13T15:00:00Z",
+    "status": "sent"
+  },
+  {
+    "Id": 23,
+    "conversationId": 7,
+    "senderId": 10,
+    "content": "Excited about the startup pitch next week!",
+    "timestamp": "2024-01-13T15:10:00Z",
+    "status": "sent"
+  }
+]

@@ -73,11 +73,14 @@ const Header = () => {
               )}
             </Button>
             
-            {/* Messages */}
-            <Button variant="ghost" size="icon">
+{/* Messages */}
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={() => navigate('/messages')}
+            >
               <ApperIcon name="Mail" size={20} />
             </Button>
-            
             {/* Profile Menu */}
             <div className="relative">
               <button

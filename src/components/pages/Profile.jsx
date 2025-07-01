@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { toast } from 'react-toastify'
-import Card from '@/components/atoms/Card'
-import Avatar from '@/components/atoms/Avatar'
-import Button from '@/components/atoms/Button'
-import PostCard from '@/components/molecules/PostCard'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import ApperIcon from '@/components/ApperIcon'
-import { userService } from '@/services/api/userService'
-import { postService } from '@/services/api/postService'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import ApperIcon from "@/components/ApperIcon";
+import Card from "@/components/atoms/Card";
+import Button from "@/components/atoms/Button";
+import Avatar from "@/components/atoms/Avatar";
+import PostCard from "@/components/molecules/PostCard";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Loading from "@/components/ui/Loading";
+import { postService } from "@/services/api/postService";
+import { userService } from "@/services/api/userService";
 
 const Profile = () => {
   const { username } = useParams()
@@ -75,12 +75,16 @@ const Profile = () => {
       }))
       toast.error('Failed to update follow status')
     }
+}
+  
+  const handleMessageClick = () => {
+    // TODO: Implement messaging functionality
+    toast.info('Messaging feature coming soon!')
   }
   
   if (loading) return <Loading />
   if (error) return <Error message={error} onRetry={loadProfile} />
   if (!user) return <Error message="User not found" />
-  
   const tabs = [
     { id: 'posts', label: 'Posts', count: user.postsCount },
     { id: 'media', label: 'Media', count: 0 },
@@ -105,8 +109,8 @@ const Profile = () => {
                 className="border-4 border-white shadow-lg"
               />
               
-              <div className="flex items-center space-x-3">
-                <Button variant="ghost" size="icon">
+<div className="flex items-center space-x-3">
+                <Button variant="ghost" size="icon" onClick={handleMessageClick}>
                   <ApperIcon name="Mail" size={20} />
                 </Button>
                 

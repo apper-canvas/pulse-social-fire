@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1,
+    "participantId": 2,
+    "lastMessage": "Hey! How's the new project coming along?",
+    "lastMessageTime": "2024-01-15T10:30:00Z",
+    "unreadCount": 2
+  },
+  {
+    "Id": 2,
+    "participantId": 3,
+    "lastMessage": "The AI integration looks promising. Let's discuss the implementation details.",
+    "lastMessageTime": "2024-01-15T09:15:00Z",
+    "unreadCount": 0
+  },
+  {
+    "Id": 3,
+    "participantId": 4,
+    "lastMessage": "Love the new design direction! The animations are smooth.",
+    "lastMessageTime": "2024-01-14T16:45:00Z",
+    "unreadCount": 1
+  },
+  {
+    "Id": 4,
+    "participantId": 5,
+    "lastMessage": "The data visualization dashboard is ready for review.",
+    "lastMessageTime": "2024-01-14T14:20:00Z",
+    "unreadCount": 0
+  },
+  {
+    "Id": 5,
+    "participantId": 7,
+    "lastMessage": "Thanks for the design feedback! I'll make those adjustments.",
+    "lastMessageTime": "2024-01-14T11:30:00Z",
+    "unreadCount": 3
+  },
+  {
+    "Id": 6,
+    "participantId": 8,
+    "lastMessage": "The open source contribution guidelines are now live.",
+    "lastMessageTime": "2024-01-13T18:45:00Z",
+    "unreadCount": 0
+  },
+  {
+    "Id": 7,
+    "participantId": 10,
+    "lastMessage": "Excited about the startup pitch next week!",
+    "lastMessageTime": "2024-01-13T15:10:00Z",
+    "unreadCount": 1
+  }
+]

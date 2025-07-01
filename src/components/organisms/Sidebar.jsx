@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react'
-import Card from '@/components/atoms/Card'
-import Avatar from '@/components/atoms/Avatar'
-import Button from '@/components/atoms/Button'
-import ApperIcon from '@/components/ApperIcon'
-import UserCard from '@/components/molecules/UserCard'
-import Loading from '@/components/ui/Loading'
-import Error from '@/components/ui/Error'
-import Empty from '@/components/ui/Empty'
-import { userService } from '@/services/api/userService'
-import { hashtagService } from '@/services/api/hashtagService'
+import React, { useEffect, useState } from "react";
+import ApperIcon from "@/components/ApperIcon";
+import Card from "@/components/atoms/Card";
+import Button from "@/components/atoms/Button";
+import Avatar from "@/components/atoms/Avatar";
+import UserCard from "@/components/molecules/UserCard";
+import Error from "@/components/ui/Error";
+import Empty from "@/components/ui/Empty";
+import Loading from "@/components/ui/Loading";
+import { userService } from "@/services/api/userService";
+import { hashtagService } from "@/services/api/hashtagService";
 
 const Sidebar = () => {
   const [currentUser, setCurrentUser] = useState(null)
@@ -16,11 +16,21 @@ const Sidebar = () => {
   const [activeUsers, setActiveUsers] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  useEffect(() => {
+useEffect(() => {
     loadSidebarData()
   }, [])
   
-const loadSidebarData = async () => {
+  const handleStartChat = (user) => {
+    try {
+      console.log('Starting chat with:', user.displayName)
+      // TODO: Implement chat functionality
+      // This could navigate to a chat page or open a chat modal
+    } catch (error) {
+      console.error('Failed to start chat:', error)
+    }
+  }
+  
+  const loadSidebarData = async () => {
     try {
       setError(null)
       setLoading(true)
@@ -124,10 +134,14 @@ const loadSidebarData = async () => {
           <div className="w-2 h-2 bg-success rounded-full"></div>
         </div>
         
-        {activeUsers.length > 0 ? (
+{activeUsers.length > 0 ? (
           <div className="space-y-3">
             {activeUsers.slice(0, 5).map((user) => (
-              <div key={user.Id} className="flex items-center space-x-3">
+              <div 
+                key={user.Id} 
+                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-surface transition-colors cursor-pointer"
+                onClick={() => handleStartChat(user)}
+              >
                 <Avatar
                   src={user.avatar}
                   alt={user.displayName}
@@ -138,6 +152,7 @@ const loadSidebarData = async () => {
                   <p className="font-medium text-gray-900 text-sm">{user.displayName}</p>
                   <p className="text-xs text-success">Active now</p>
                 </div>
+                <ApperIcon name="MessageCircle" size={16} className="text-secondary opacity-0 group-hover:opacity-100" />
               </div>
             ))}
           </div>
