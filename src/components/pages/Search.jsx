@@ -10,6 +10,7 @@ import Error from '@/components/ui/Error'
 import Empty from '@/components/ui/Empty'
 import ApperIcon from '@/components/ApperIcon'
 import { searchService } from '@/services/api/searchService'
+import { hashtagService } from '@/services/api/hashtagService'
 
 const Search = () => {
   const [searchParams] = useSearchParams()
@@ -18,7 +19,9 @@ const Search = () => {
   const [activeTab, setActiveTab] = useState('all')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  
+  const [showTrending, setShowTrending] = useState(false)
+  const [trendingHashtags, setTrendingHashtags] = useState([])
+  const [trendingLoading, setTrendingLoading] = useState(false)
   useEffect(() => {
     const q = searchParams.get('q')
     if (q) {
@@ -51,6 +54,35 @@ const Search = () => {
     if (query.trim()) {
       performSearch(query)
     }
+}
+  
+  const handleSearchInputFocus = async () => {
+    if (!showTrending) {
+      setShowTrending(true)
+      if (trendingHashtags.length === 0) {
+        try {
+          setTrendingLoading(true)
+          const trending = await hashtagService.getTrending(8)
+          setTrendingHashtags(trending)
+        } catch (error) {
+          console.error('Failed to fetch trending hashtags:', error)
+        } finally {
+          setTrendingLoading(false)
+        }
+      }
+    }
+  }
+  
+  const handleTrendingHashtagClick = (hashtag) => {
+    const searchQuery = `#${hashtag.tag}`
+    setQuery(searchQuery)
+    setShowTrending(false)
+    performSearch(searchQuery)
+  }
+  
+  const handleSearchInputBlur = () => {
+    // Delay hiding to allow hashtag clicks
+    setTimeout(() => setShowTrending(false), 200)
   }
   
   const tabs = [
@@ -132,20 +164,71 @@ const Search = () => {
         <p className="text-secondary">Find people, posts, and hashtags</p>
       </div>
       
-      {/* Search Form */}
-      <Card>
-        <form onSubmit={handleSearch}>
-          <Input
-            type="text"
-            placeholder="Search for people, posts, hashtags..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            icon="Search"
-            className="text-lg"
-          />
-        </form>
-      </Card>
-      
+{/* Search Form */}
+      <div className="relative">
+        <Card>
+          <form onSubmit={handleSearch}>
+            <Input
+              type="text"
+              placeholder="Search for people, posts, hashtags..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onFocus={handleSearchInputFocus}
+              onBlur={handleSearchInputBlur}
+              icon="Search"
+              className="text-lg"
+            />
+          </form>
+        </Card>
+        
+        {/* Trending Hashtags Dropdown */}
+        {showTrending && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-full left-0 right-0 mt-2 z-10"
+          >
+            <Card>
+              <div className="p-2">
+                <div className="flex items-center space-x-2 mb-3">
+                  <ApperIcon name="TrendingUp" size={16} className="text-primary" />
+                  <h3 className="font-medium text-gray-900">Trending Hashtags</h3>
+                </div>
+                
+                {trendingLoading ? (
+                  <div className="flex items-center justify-center py-4">
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary"></div>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {trendingHashtags.map((hashtag) => (
+                      <button
+                        key={hashtag.tag}
+                        onClick={() => handleTrendingHashtagClick(hashtag)}
+                        className="flex items-center space-x-2 p-2 rounded-lg bg-gray-50 hover:bg-primary/10 transition-colors text-left"
+                      >
+                        <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                          <ApperIcon name="Hash" size={12} className="text-primary" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="font-medium text-gray-900 text-sm truncate">
+                            {hashtag.tag}
+                          </p>
+                          <p className="text-xs text-secondary">
+                            {hashtag.postCount} posts
+                          </p>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </Card>
+          </motion.div>
+        )}
+      </div>
       {/* Tabs */}
       {query && (
         <Card padding="none">
