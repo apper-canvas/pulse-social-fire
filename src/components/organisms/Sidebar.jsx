@@ -14,30 +14,26 @@ const Sidebar = () => {
   const [currentUser, setCurrentUser] = useState(null)
   const [suggestedUsers, setSuggestedUsers] = useState([])
   const [activeUsers, setActiveUsers] = useState([])
-  const [trendingHashtags, setTrendingHashtags] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  
   useEffect(() => {
     loadSidebarData()
   }, [])
   
-  const loadSidebarData = async () => {
+const loadSidebarData = async () => {
     try {
       setError(null)
       setLoading(true)
       
-      const [userStats, suggested, active, hashtags] = await Promise.all([
+      const [userStats, suggested, active] = await Promise.all([
         userService.getCurrentUserStats(),
         userService.getSuggested(),
-        userService.getActiveUsers(),
-        hashtagService.getTrending()
+        userService.getActiveUsers()
       ])
       
       setCurrentUser(userStats)
       setSuggestedUsers(suggested)
       setActiveUsers(active)
-      setTrendingHashtags(hashtags)
     } catch (error) {
       console.error('Failed to load sidebar data:', error)
       setError('Failed to load sidebar data')
@@ -81,39 +77,7 @@ const Sidebar = () => {
             </div>
           </div>
         </Card>
-      )}
-      
-      {/* Trending Hashtags */}
-      <Card>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-gray-900">Trending</h3>
-          <ApperIcon name="TrendingUp" size={16} className="text-primary" />
-        </div>
-        
-        {trendingHashtags.length > 0 ? (
-          <div className="space-y-3">
-            {trendingHashtags.map((hashtag) => (
-              <div
-                key={hashtag.tag}
-                className="flex items-center justify-between p-2 hover:bg-surface rounded-lg cursor-pointer transition-colors"
-              >
-                <div>
-                  <p className="font-medium text-primary">#{hashtag.tag}</p>
-                  <p className="text-xs text-secondary">{hashtag.postCount} posts</p>
-                </div>
-                <ApperIcon name="Hash" size={16} className="text-secondary" />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <Empty 
-            icon="Hash"
-            title="No trending hashtags"
-            description="Be the first to start a trend!"
-          />
-        )}
-      </Card>
-      
+)}
       {/* Suggested Users */}
       <Card>
         <div className="flex items-center justify-between mb-4">

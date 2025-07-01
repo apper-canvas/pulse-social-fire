@@ -110,7 +110,17 @@ class SearchService {
       )
       .slice(0, limit)
     
-    return hashtags.map(hashtag => ({ ...hashtag }))
+return hashtags.map(hashtag => ({ ...hashtag }))
+  }
+  
+  async getTrendingHashtags(limit = 6) {
+    await delay(250)
+    const trending = mockHashtags
+      .filter(hashtag => hashtag.trending)
+      .sort((a, b) => b.postCount - a.postCount)
+      .slice(0, limit)
+    
+    return trending.map(hashtag => ({ ...hashtag }))
   }
 }
 
