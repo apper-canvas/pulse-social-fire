@@ -1,18 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import React from "react";
+import React, { useState } from "react";
 import Search from "@/components/pages/Search";
 import Profile from "@/components/pages/Profile";
 import Home from "@/components/pages/Home";
 import Explore from "@/components/pages/Explore";
 import Chat from "@/components/pages/Chat";
+import ChatOverlay from "@/components/organisms/ChatOverlay";
 import Layout from "@/components/organisms/Layout";
 
 function App() {
-  return (
+  const [isChatOverlayOpen, setIsChatOverlayOpen] = useState(false);
+return (
     <div className="min-h-screen bg-white">
-      <Layout>
-<Routes>
+      <Layout onToggleChat={() => setIsChatOverlayOpen(!isChatOverlayOpen)}>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/profile/:username" element={<Profile />} />
@@ -22,6 +24,10 @@ function App() {
         </Routes>
       </Layout>
       
+      <ChatOverlay 
+        isOpen={isChatOverlayOpen}
+        onClose={() => setIsChatOverlayOpen(false)}
+      />
       <ToastContainer
         position="top-right"
         autoClose={3000}

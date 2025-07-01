@@ -6,7 +6,7 @@ import Avatar from '@/components/atoms/Avatar'
 import Button from '@/components/atoms/Button'
 import ApperIcon from '@/components/ApperIcon'
 
-const Header = () => {
+const Header = ({ onToggleChat }) => {
   const [showProfileMenu, setShowProfileMenu] = useState(false)
   const [notifications] = useState(3) // Mock notification count
   const navigate = useNavigate()
@@ -23,8 +23,8 @@ const Header = () => {
     setShowProfileMenu(false)
   }
   
-  return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+return (
+    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -77,10 +77,12 @@ const Header = () => {
             <Button 
               variant="ghost" 
               size="icon"
-              onClick={() => navigate('/messages')}
+              onClick={onToggleChat}
+              title="Open messages"
             >
               <ApperIcon name="Mail" size={20} />
             </Button>
+            
             {/* Profile Menu */}
             <div className="relative">
               <button
