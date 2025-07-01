@@ -1,0 +1,112 @@
+[
+  {
+    "Id": 1,
+    "username": "johndoe",
+    "displayName": "John Doe",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Frontend developer passionate about React and modern web technologies. Building amazing user experiences one component at a time.",
+    "followersCount": 1284,
+    "followingCount": 532,
+    "postsCount": 89,
+    "isActive": true
+  },
+  {
+    "Id": 2,
+    "username": "sarahdesigner",
+    "displayName": "Sarah Wilson",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "UI/UX Designer creating delightful digital experiences. Coffee enthusiast ☕ and weekend hiker 🥾",
+    "followersCount": 2156,
+    "followingCount": 423,
+    "postsCount": 156,
+    "isActive": true
+  },
+  {
+    "Id": 3,
+    "username": "techguru_mike",
+    "displayName": "Mike Chen",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Full-stack engineer | AI enthusiast | Building the future of technology. Always learning, always coding.",
+    "followersCount": 3421,
+    "followingCount": 678,
+    "postsCount": 234,
+    "isActive": false
+  },
+  {
+    "Id": 4,
+    "username": "creativealex",
+    "displayName": "Alex Rivera",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Digital artist and content creator. Bringing imagination to life through pixels and code. 🎨✨",
+    "followersCount": 987,
+    "followingCount": 345,
+    "postsCount": 67,
+    "isActive": true
+  },
+  {
+    "Id": 5,
+    "username": "dataqueen",
+    "displayName": "Emma Thompson",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Data scientist turning numbers into insights. Machine learning researcher and visualization expert.",
+    "followersCount": 1678,
+    "followingCount": 234,
+    "postsCount": 123,
+    "isActive": true
+  },
+  {
+    "Id": 6,
+    "username": "mobilemaven",
+    "displayName": "David Kim",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Mobile app developer | iOS & React Native specialist | Building apps that people love to use every day.",
+    "followersCount": 2341,
+    "followingCount": 567,
+    "postsCount": 178,
+    "isActive": false
+  },
+  {
+    "Id": 7,
+    "username": "designerlily",
+    "displayName": "Lily Martinez",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Brand designer with a passion for typography and minimalist aesthetics. Making brands memorable.",
+    "followersCount": 1456,
+    "followingCount": 389,
+    "postsCount": 92,
+    "isActive": true
+  },
+  {
+    "Id": 8,
+    "username": "codecrafter",
+    "displayName": "Ryan Foster",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Software architect | Open source contributor | Mentoring the next generation of developers.",
+    "followersCount": 2789,
+    "followingCount": 456,
+    "postsCount": 201,
+    "isActive": true
+  },
+  {
+    "Id": 9,
+    "username": "marketingmia",
+    "displayName": "Mia Johnson",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Digital marketing strategist | Growth hacker | Turning data into actionable marketing insights.",
+    "followersCount": 1923,
+    "followingCount": 612,
+    "postsCount": 143,
+    "isActive": false
+  },
+  {
+    "Id": 10,
+    "username": "startupsteve",
+    "displayName": "Steve Anderson",
+    "avatar": "/api/placeholder/150/150",
+    "bio": "Serial entrepreneur | Tech startup advisor | Building products that solve real-world problems.",
+    "followersCount": 3567,
+    "followingCount": 789,
+    "postsCount": 287,
+    "isActive": true
+  }
+]

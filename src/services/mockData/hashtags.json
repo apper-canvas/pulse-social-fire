@@ -1,0 +1,102 @@
+[
+  {
+    "tag": "TechTuesday",
+    "postCount": 1247,
+    "trending": true
+  },
+  {
+    "tag": "Photography",
+    "postCount": 2156,
+    "trending": true
+  },
+  {
+    "tag": "Travel",
+    "postCount": 3421,
+    "trending": true
+  },
+  {
+    "tag": "ReactJS",
+    "postCount": 892,
+    "trending": true
+  },
+  {
+    "tag": "WebDev",
+    "postCount": 1678,
+    "trending": true
+  },
+  {
+    "tag": "Design",
+    "postCount": 2234,
+    "trending": true
+  },
+  {
+    "tag": "AI",
+    "postCount": 1456,
+    "trending": true
+  },
+  {
+    "tag": "MachineLearning",
+    "postCount": 987,
+    "trending": true
+  },
+  {
+    "tag": "UX",
+    "postCount": 1123,
+    "trending": true
+  },
+  {
+    "tag": "Frontend",
+    "postCount": 789,
+    "trending": false
+  },
+  {
+    "tag": "Backend",
+    "postCount": 654,
+    "trending": false
+  },
+  {
+    "tag": "JavaScript",
+    "postCount": 2345,
+    "trending": false
+  },
+  {
+    "tag": "Python",
+    "postCount": 1789,
+    "trending": false
+  },
+  {
+    "tag": "DataScience",
+    "postCount": 876,
+    "trending": false
+  },
+  {
+    "tag": "Mobile",
+    "postCount": 543,
+    "trending": false
+  },
+  {
+    "tag": "iOS",
+    "postCount": 432,
+    "trending": false
+  },
+  {
+    "tag": "Android",
+    "postCount": 378,
+    "trending": false
+  },
+  {
+    "tag": "Startup",
+    "postCount": 1234,
+    "trending": false
+  },
+  {
+    "tag": "Entrepreneur",
+    "postCount": 967,
+    "trending": false
+  },
+  {
+    "tag": "Marketing",
+    "postCount": 1567,
+    "trending": false
+  }
+]

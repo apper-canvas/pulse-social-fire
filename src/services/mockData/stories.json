@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "userId": 2,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-15T09:30:00Z",
+    "expiresAt": "2024-01-16T09:30:00Z",
+    "views": 45
+  },
+  {
+    "Id": 2,
+    "userId": 4,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-15T07:15:00Z",
+    "expiresAt": "2024-01-16T07:15:00Z",
+    "views": 23
+  },
+  {
+    "Id": 3,
+    "userId": 7,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-15T06:45:00Z",
+    "expiresAt": "2024-01-16T06:45:00Z",
+    "views": 34
+  },
+  {
+    "Id": 4,
+    "userId": 8,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-15T05:20:00Z",
+    "expiresAt": "2024-01-16T05:20:00Z",
+    "views": 67
+  },
+  {
+    "Id": 5,
+    "userId": 10,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-15T04:10:00Z",
+    "expiresAt": "2024-01-16T04:10:00Z",
+    "views": 12
+  },
+  {
+    "Id": 6,
+    "userId": 3,
+    "media": "/api/placeholder/400/600",
+    "timestamp": "2024-01-14T22:30:00Z",
+    "expiresAt": "2024-01-15T22:30:00Z",
+    "views": 89
+  }
+]

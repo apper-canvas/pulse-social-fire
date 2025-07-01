@@ -1,0 +1,181 @@
+[
+  {
+    "Id": 1,
+    "userId": 1,
+    "content": "Just shipped a new feature using React hooks! The power of useState and useEffect never ceases to amaze me. Clean, readable, and maintainable code is the goal 🚀 #ReactJS #WebDev #Frontend",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "San Francisco, CA",
+    "hashtags": ["ReactJS", "WebDev", "Frontend"],
+    "likes": 156,
+    "comments": 23,
+    "shares": 12,
+    "timestamp": "2024-01-15T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "userId": 2,
+    "content": "Working on a new design system for our upcoming product launch. The balance between consistency and creativity is always a fun challenge! What's your favorite design tool? #Design #UX #DesignSystem",
+    "media": [],
+    "location": "",
+    "hashtags": ["Design", "UX", "DesignSystem"],
+    "likes": 89,
+    "comments": 15,
+    "shares": 8,
+    "timestamp": "2024-01-15T08:45:00Z"
+  },
+  {
+    "Id": 3,
+    "userId": 3,
+    "content": "AI is revolutionizing how we approach software development. Just implemented GPT-4 integration in our latest project and the results are mind-blowing! The future is now 🤖 #AI #MachineLearning #TechTuesday",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "Austin, TX",
+    "hashtags": ["AI", "MachineLearning", "TechTuesday"],
+    "likes": 234,
+    "comments": 45,
+    "shares": 28,
+    "timestamp": "2024-01-14T16:20:00Z"
+  },
+  {
+    "Id": 4,
+    "userId": 4,
+    "content": "Latest digital art piece inspired by cyberpunk aesthetics. Sometimes you need to step away from code and create something purely visual 🎨✨ #DigitalArt #Cyberpunk #Creativity",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/600"
+      }
+    ],
+    "location": "Los Angeles, CA",
+    "hashtags": ["DigitalArt", "Cyberpunk", "Creativity"],
+    "likes": 312,
+    "comments": 67,
+    "shares": 34,
+    "timestamp": "2024-01-14T14:15:00Z"
+  },
+  {
+    "Id": 5,
+    "userId": 5,
+    "content": "Data visualization can tell powerful stories! Just completed an analysis showing the correlation between user engagement and feature adoption. The insights are fascinating 📊 #DataScience #Analytics #Visualization",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "Seattle, WA",
+    "hashtags": ["DataScience", "Analytics", "Visualization"],
+    "likes": 178,
+    "comments": 29,
+    "shares": 19,
+    "timestamp": "2024-01-14T11:30:00Z"
+  },
+  {
+    "Id": 6,
+    "userId": 6,
+    "content": "SwiftUI continues to impress me with its declarative approach to iOS development. Building beautiful mobile interfaces has never been easier! #iOS #SwiftUI #MobileDev",
+    "media": [],
+    "location": "New York, NY",
+    "hashtags": ["iOS", "SwiftUI", "MobileDev"],
+    "likes": 127,
+    "comments": 18,
+    "shares": 11,
+    "timestamp": "2024-01-13T19:45:00Z"
+  },
+  {
+    "Id": 7,
+    "userId": 7,
+    "content": "Typography is the voice of design. Spent the morning exploring new font pairings for our rebrand project. Every letter matters! ✍️ #Typography #Design #Branding",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "Chicago, IL",
+    "hashtags": ["Typography", "Design", "Branding"],
+    "likes": 95,
+    "comments": 12,
+    "shares": 7,
+    "timestamp": "2024-01-13T15:20:00Z"
+  },
+  {
+    "Id": 8,
+    "userId": 8,
+    "content": "Open source contribution day! Just merged a PR that improves performance by 40%. Love giving back to the community that has given me so much 🙏 #OpenSource #Community #Performance",
+    "media": [],
+    "location": "Portland, OR",
+    "hashtags": ["OpenSource", "Community", "Performance"],
+    "likes": 203,
+    "comments": 31,
+    "shares": 22,
+    "timestamp": "2024-01-13T12:10:00Z"
+  },
+  {
+    "Id": 9,
+    "userId": 9,
+    "content": "Growth hacking isn't about tricks - it's about understanding your users deeply and creating value at every touchpoint. Here's what we learned from our latest campaign 📈 #GrowthHacking #Marketing #Strategy",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "Miami, FL",
+    "hashtags": ["GrowthHacking", "Marketing", "Strategy"],
+    "likes": 145,
+    "comments": 25,
+    "shares": 16,
+    "timestamp": "2024-01-12T17:35:00Z"
+  },
+  {
+    "Id": 10,
+    "userId": 10,
+    "content": "Building a startup is like solving a 1000-piece puzzle while riding a rollercoaster. Challenging but incredibly rewarding! What's the biggest lesson you've learned as an entrepreneur? #Startup #Entrepreneur #Lessons",
+    "media": [],
+    "location": "Boulder, CO",
+    "hashtags": ["Startup", "Entrepreneur", "Lessons"],
+    "likes": 267,
+    "comments": 52,
+    "shares": 33,
+    "timestamp": "2024-01-12T13:25:00Z"
+  },
+  {
+    "Id": 11,
+    "userId": 1,
+    "content": "Weekend project: Built a personal finance tracker with React and Chart.js. Nothing beats the satisfaction of seeing your code come to life! 💰📊 #PersonalProject #React #FinTech",
+    "media": [
+      {
+        "type": "image",
+        "url": "/api/placeholder/600/400"
+      }
+    ],
+    "location": "San Francisco, CA",
+    "hashtags": ["PersonalProject", "React", "FinTech"],
+    "likes": 189,
+    "comments": 34,
+    "shares": 21,
+    "timestamp": "2024-01-11T20:15:00Z"
+  },
+  {
+    "Id": 12,
+    "userId": 2,
+    "content": "User research session today revealed some surprising insights about our target audience. Never assume - always validate with real users! #UserResearch #UXDesign #ProductDesign",
+    "media": [],
+    "location": "Seattle, WA",
+    "hashtags": ["UserResearch", "UXDesign", "ProductDesign"],
+    "likes": 76,
+    "comments": 14,
+    "shares": 9,
+    "timestamp": "2024-01-11T16:40:00Z"
+  }
+]
