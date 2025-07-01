@@ -1,8 +1,34 @@
 import mockPosts from '@/services/mockData/posts.json'
 import mockUsers from '@/services/mockData/users.json'
+import { v4 as uuidv4 } from 'uuid'
 
 // Simulate API delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+
+// In-memory comment storage (in real app, this would be in database)
+let mockComments = [
+  {
+    Id: 1,
+    postId: 1,
+    userId: 2,
+    content: "This is such a beautiful post! Thanks for sharing.",
+    timestamp: "2024-01-15T10:30:00.000Z"
+  },
+  {
+    Id: 2,
+    postId: 1,
+    userId: 3,
+    content: "Absolutely love this! Keep up the great work.",
+    timestamp: "2024-01-15T11:45:00.000Z"
+  },
+  {
+    Id: 3,
+    postId: 2,
+    userId: 1,
+    content: "Great insights here. Really helpful perspective.",
+    timestamp: "2024-01-14T15:20:00.000Z"
+  }
+]
 
 class PostService {
   async getAll() {
@@ -105,6 +131,79 @@ class PostService {
       const user = mockUsers.find(u => u.Id === post.userId)
       return {
         ...post,
+        user: user ? { ...user } : null
+}
+    })
+  }
+
+  // Comment management methods
+  async getComments(postId) {
+    await delay(300)
+    const postComments = mockComments
+      .filter(c => c.postId === parseInt(postId))
+      .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+    
+    return this.enrichCommentsWithUsers(postComments)
+  }
+
+  async addComment(postId, content) {
+    await delay(400)
+    const newComment = {
+      Id: Math.max(...mockComments.map(c => c.Id), 0) + 1,
+      postId: parseInt(postId),
+      userId: 1, // Current user ID for demo
+      content: content.trim(),
+      timestamp: new Date().toISOString()
+    }
+    
+    mockComments.unshift(newComment)
+    
+    // Update post comment count
+    const post = mockPosts.find(p => p.Id === parseInt(postId))
+    if (post) {
+      post.comments += 1
+    }
+    
+    return this.enrichCommentsWithUsers([newComment])[0]
+  }
+
+  async updateComment(commentId, content) {
+    await delay(300)
+    const index = mockComments.findIndex(c => c.Id === parseInt(commentId))
+    if (index === -1) throw new Error('Comment not found')
+    
+    mockComments[index] = {
+      ...mockComments[index],
+      content: content.trim(),
+      updatedAt: new Date().toISOString()
+    }
+    
+    return this.enrichCommentsWithUsers([mockComments[index]])[0]
+  }
+
+  async deleteComment(commentId) {
+    await delay(250)
+    const index = mockComments.findIndex(c => c.Id === parseInt(commentId))
+    if (index === -1) throw new Error('Comment not found')
+    
+    const comment = mockComments[index]
+    mockComments.splice(index, 1)
+    
+    // Update post comment count
+    const post = mockPosts.find(p => p.Id === comment.postId)
+    if (post && post.comments > 0) {
+      post.comments -= 1
+    }
+    
+    return { success: true }
+  }
+
+  // Helper method to enrich comments with user data
+  enrichCommentsWithUsers(comments) {
+    return comments.map(comment => {
+      const user = mockUsers.find(u => u.Id === comment.userId)
+      return {
+        ...comment,
         user: user ? { ...user } : null
       }
     })
